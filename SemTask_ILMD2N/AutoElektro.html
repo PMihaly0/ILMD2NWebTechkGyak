@@ -54,6 +54,54 @@
 			color: #fff;
 			text-decoration: none;
 		}
+
+		form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+select,
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
 	</style>
 </head>
 <body>
@@ -67,9 +115,45 @@
 				<li>Infotainment rendszer: az autó vezetője és utasai számára szórakoztatási lehetőségeket kínáló rendszer, beleértve a hang- és képalkotó eszközöket, az érintőképernyős felületet és a navigációs rendszert.</li>
 				<li>Biztonsági rendszerek: például az összkerék-hajtás, az automatikus vészfékrendszer, az adaptív sebességszabályozó és a sávváltás-figyelmeztető rendszer, amelyek segítenek megelőzni a baleseteket és javítják az utazás biztonságát.</li>
 			</ul>
-<p>Az autó elektronikájának megfelelő működése és karbantartása nagyon fontos a biztonságos és megbízható autózáshoz. Az autó elektronikai rendszereinek javításához és karbantartásához szakértői tudás és megfelelő eszközök szükségesek, ezért javasolt a szervizelés szakemberekre bízása.</p>
+		<p>Az autó elektronikájának megfelelő működése és karbantartása nagyon fontos a biztonságos és megbízható autózáshoz. Az autó elektronikai rendszereinek javításához és karbantartásához szakértői tudás és megfelelő eszközök szükségesek, ezért javasolt a szervizelés szakemberekre bízása.</p>
 
         <img src="targy1kep.png" class="image-placeholder">
+		
+		<p>Ha szeretnél tanácsot kérni autóddal kapcsolatban kérlek töltsd ki az alábbi elemeket:</p>
+		
+		<form>
+			<label for="name">Név:</label>
+			<input type="text" id="name" name="name" required>
+			
+			<label for="email">E-mail cím:</label>
+			<input type="email" id="email" name="email" required>
+			
+			<label for="age">Életkor:</label>
+			<input type="number" id="age" name="age" min="18" max="100" required>
+			
+			<label for="gender">Nem:</label>
+			<select id="gender" name="gender" required>
+			  <option value="">Válassz</option>
+			  <option value="male">Férfi</option>
+			  <option value="female">Nő</option>
+			  <option value="other">Egyéb</option>
+			</select>
+			
+			<label for="carBrand">Kedvenc autó márka:</label>
+			<input type="text" id="carBrand" name="carBrand" required>
+			
+			<label for="date">Jelenlegi dátum:</label>
+			<input type="date" id="date" name="date" required>
+			
+			<label for="carCount">Autók száma:</label>
+			<input type="number" id="carCount" name="carCount" min="0" required>
+			
+			<label for="message">Üzenet:</label>
+			<textarea id="message" name="message" rows="4" required></textarea>
+			
+			<input type="submit" value="Küldés">
+		  </form>
+		  
 
 	</div>
 	<footer class="footer">
